@@ -1,0 +1,1 @@
+/home/lippiece/.config/nixos/update.sh
