@@ -11,19 +11,6 @@
   }: let
     system = "x86_64-linux";
 
-    # releases = builtins.fromJSON (builtins.readFile (pkgs.fetchurl {
-    #   url = "https://api.github.com/repos/brave/zen-browser/releases";
-    #   sha256 = "1p204yis9cg0p5ndic437swz6f8p0i00wzd1x4gwymg5w8ga47dl";
-    # }));
-    #
-    # latestNightly =
-    #   builtins.head releases;
-    #
-    # version =
-    #   builtins.head
-    #   # Twilight build - 1.0.1-t.20
-    #   (builtins.match "Twilight build - (\d+\.\d+\.\d+-[a-z]\.\d+) .*" latestNightly.name);
-
     version = "twilight";
 
     pkgs = import nixpkgs {
@@ -87,7 +74,7 @@
 
         src = builtins.fetchTarball {
           url = "https://github.com/zen-browser/desktop/releases/download/twilight/zen.linux-specific.tar.bz2";
-          sha256 = "1r2dxnxxiya81vpacqvwm7351wcyfrvwg6fhrf5aj32c68z4mmd3";
+          sha256 = "0a16867sdb77jjg7s52ypifwjkqf1b4yplc1qj3zvd5giz3l0qh3";
         };
 
         desktopSrc = ./.;
